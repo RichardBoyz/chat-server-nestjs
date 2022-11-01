@@ -11,6 +11,7 @@ import { UpdateMessageDto } from './dto/update-message.dto';
 import { Server, Socket } from 'socket.io';
 
 @WebSocketGateway({
+  transports: ['websocket', 'polling', 'flashsocket'],
   cors: {
     origin: '*',
   },
